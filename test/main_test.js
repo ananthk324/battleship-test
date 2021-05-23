@@ -2,5 +2,5 @@ const { expect } = require("chai");
 
 // Suite
 describe("Mocha", () => {
-  it("Running tests", () => expect(true).to.be.true);
+  it("running tests..", () => expect(true).to.be.true);
 });
