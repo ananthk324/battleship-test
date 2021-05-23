@@ -1,5 +1,5 @@
 const checkForShip = (player, coordinates) => {
-  return player.ships.some((ship) =>
+  return player.ships.find((ship) =>
     ship.locations.find(
       (shipCoordinates) =>
         shipCoordinates[0] === coordinates[0] &&
@@ -8,4 +8,16 @@ const checkForShip = (player, coordinates) => {
   );
 };
 
-module.exports = { checkForShip };
+const damageShip = (ship, coordinates) => {
+  ship.damage.push(coordinates);
+};
+
+const fire = (player, coordinates) => {
+  const ship = checkForShip(player, coordinates);
+
+  if (!ship) return;
+
+  damageShip(ship, coordinates);
+};
+
+module.exports = { checkForShip, damageShip, fire };
