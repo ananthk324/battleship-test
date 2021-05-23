@@ -1,0 +1,16 @@
+{
+  "name": "battleship",
+  "version": "1.0.0",
+  "description": "Learning unit testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "AK",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "eslint": "^7.27.0",
+    "mocha": "^8.4.0"
+  }
+}
